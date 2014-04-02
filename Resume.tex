@@ -1,0 +1,156 @@
+\documentclass[letterpaper,11pt]{article}
+
+%-----------------------------------------------------------
+\usepackage{latexsym}
+\usepackage[empty]{fullpage}
+\usepackage[usenames,dvipsnames]{color}
+\usepackage{verbatim}
+\usepackage{url}
+\usepackage[pdftex]{hyperref}
+\hypersetup{
+    colorlinks,%
+    citecolor=black,%
+    filecolor=black,%
+    linkcolor=black,%
+    urlcolor=mygreylink     % can put red here to visualize the links
+}
+\urlstyle{same}
+\definecolor{mygrey}{gray}{.85}
+\definecolor{mygreylink}{gray}{.30}
+\textheight=9.0in
+\raggedbottom
+\raggedright
+\setlength{\tabcolsep}{0in}
+
+% Adjust margins
+\addtolength{\oddsidemargin}{-0.375in}
+\addtolength{\evensidemargin}{0.375in}
+\addtolength{\textwidth}{0.5in}
+\addtolength{\topmargin}{-.375in}
+\addtolength{\textheight}{0.75in}
+
+\newcommand{\resitem}[1]{\item #1 \vspace{-2pt}}
+\newcommand{\resheading}[1]{{\large \colorbox{mygrey}{\begin{minipage}{\textwidth}{\textbf{#1 \vphantom{p\^{E}}}}\end{minipage}}}}
+\newcommand{\ressubheading}[4]{
+\begin{tabular*}{6.5in}{l@{\extracolsep{\fill}}r}
+		\textbf{#1} & #2 \\
+		\textit{#3} & \textit{#4} \\
+\end{tabular*}\vspace{-6pt}}
+
+\begin{document}
+
+\newcommand{\mywebheader}{
+\begin{tabular*}{7in}{l@{\extracolsep{\fill}}r}
+	\textbf{\href{http://www.cs.vt.edu/~jiaoyang/}{\LARGE Yang Jiao}}
+	& \href{mailto:jiaoyang@vt.edu}{\url{jiaoyang@vt.edu}}\\
+	{\footnotesize \texttt{1979 Milky Way, Verona, WI 53593}} &
+	\href{http://www.cs.vt.edu/\%7ejiaoyang/}{\url{http://www.cs.vt.edu/~jiaoyang/}}
+	\\
+	\end{tabular*}
+\\
+\vspace{0.1in}}
+
+\mywebheader
+
+%%%%%%%%%%%%%%%%%%%%%%
+\resheading{Skills}
+	\begin{description}
+		\item[Programming:] { \footnotesize C, C++, Assembly (x86),
+		\LaTeX2e}
+		\item[Web:] { \footnotesize PHP5, HTML, JavaScript, VBScript}
+		\item[Database:]{ \footnotesize MySQL, MUMPS/Cach\'e, DB2} 
+		\item[GPGPU:]{ \footnotesize CUDA, OpenCL} 
+	\end{description} % End Skills list
+
+%%%%%%%%%%%%%%%%%%%%%%
+\resheading{Experience}
+	\begin{itemize}
+		\item 
+			\ressubheading{\href{http://www.epic.com}{Epic Systems}}{Verona,
+			WI}{Software Developer}{Jan. 2011 -- Present} { \footnotesize
+				\begin{itemize}
+				  	\resitem{Lead pilot projects on revamping existing functionalities using
+				  	next generation platform and technology;} 
+				  	\resitem{Touch base with current and potential customers on a regular
+				  	basis to analyze their requirements;} 
+				  	\resitem{Design and implement both server and client features that
+					have been committed to customers;}
+					\resitem{Peer review other developers' work and provide constructive
+					feedback to continuously improve the code quality;}
+					\resitem{Participate in the whole cycle of testing and release, help draft 
+					and review both test plans and release notes;}
+					\resitem{Collect end users' feedback and prioritize bug fixes, collaborate
+					with other roles to release updates promptly.}
+				\end{itemize}
+				}
+		\item 
+			\ressubheading{\href{http://synergy.cs.vt.edu}{SyNeRGY Lab}}{Blacksburg,
+			VA}{Research Assistant}{Aug. 2009 -- Dec. 2010} { \footnotesize
+				\begin{itemize}
+					\resitem{Design and implement micro kernels to probe GPGPU performance 
+					under varying frequencies;}
+					\resitem{Publish research paper about green super computing using GPGPU
+					in GreenCom 2010;} 
+					\resitem{Admin infrastructure and computing resources for the reseach group.}   
+				\end{itemize}
+				}
+		\item 
+			\ressubheading{\href{http://www.green500.org}{The Green500 List}}{Blacksburg,
+			VA}{Web Developer}{Aug. 2009 -- Dec. 2010} { \footnotesize
+				\begin{itemize} 
+					\resitem{Build the web submission system based on LAMP for The Green500
+					List;} 
+					\resitem{Design, implement, and optimize the backbone MySQL database of The
+					Green500 List;}
+					\resitem{Visualize large scale data using Google Visualization API and
+					JavaScript Infovis Toolkit.}
+				\end{itemize}
+				}
+		\item 
+			\ressubheading{\href{http://www.isi.edu}{USC Information Sciences Institute}}{Arlington,
+			VA}{Visiting Research Assistant}{May 2010 -- Aug. 2010} { \footnotesize
+				\begin{itemize}
+					\resitem{Parse several gigabytes of subversion and regression testing logs
+					via Perl and Python to retrieve information;}
+					\resitem{Store all parsed data in MySQL database and build internal web
+					interface by PHP for easy access to the database;}
+					\resitem{Visualize stored information via Java-based Processing framework, 
+					generating treemaps and time series plots;}
+					\resitem{Publish research paper in ESEM 2011.}
+				\end{itemize}
+				}
+		\item 
+			\ressubheading{\href{http://people.cs.vt.edu/~tilevich/}{Software
+			Inovations Lab}}{Blacksburg, VA}{Research Assistant}{Aug. 2008 -- May 2009} 
+			{\footnotesize
+				\begin{itemize}
+					\resitem{Design, implement, and test the remote conditionals of BRMI (Batch
+					Remote Method Invocation);}
+					\resitem{Design and implement the fundamental network communication
+					infrastructure of RBI (Remote Batch Invocation);}
+					\resitem{Both projects have achieved the goal of extending the
+					functionality of existing Java RMI framework;}
+					\resitem{Publish two research papers in top conferences, i.e., ICDCS 2009
+					and ECOOP 2009 respectively.}
+				\end{itemize}
+				}
+	\end{itemize}  % End Experience list
+
+%%%%%%%%%%%%%%%%%%%%%%
+\resheading{Education}
+	\begin{itemize}
+		\item
+			\ressubheading{\href{http://www.vt.edu}{Virginia Tech}}{Blacksburg,
+			VA}{\href{http://www.cs.vt.edu/}{Master of Science
+			in Computer Science}}{Aug. 2008 -- Dec. 2010}
+		\item
+			\ressubheading{\href{http://www.nju.edu.cn}{Nanjing University}}{Nanjing,
+			China}{\href{http://cs.nju.edu.cn/}{Master of Engineering
+			in Computer Science}}{Sep. 2006 -- Jun. 2008}
+		\item
+			\ressubheading{\href{http://www.nju.edu.cn}{Nanjing University}}{Nanjing,
+			China}{\href{http://cs.nju.edu.cn/}{Bachelor of Science
+			in Computer Science}}{Sep. 2002 -- Jun. 2006}
+	\end{itemize} % End Education list
+
+\end{document}
