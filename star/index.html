@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<head>
+  <title>Dustin's Star Program</title>
+  <script src="https://unpkg.com/vue"></script>
+  <style>
+    .button {
+          background-color: #4CAF50;
+          border: none;
+          color: white;
+          padding: 15px 32px;
+          text-align: center;
+          text-decoration: none;
+          display: inline-block;
+          font-size: 16px;
+          margin: 4px 2px;
+          cursor: pointer;
+      }
+      </style>
+</head>
+
+<body>
+  <div id="app">
+    <img src="./images/star.png" alt="star logo">
+    <h1>{{ greeting }}</h1>
+    <!--ul>
+      <li>
+        To learn more about Vue, visit
+        <a :href="docsURL" target="_blank">
+          {{ humanizeURL(docsURL) }}
+        </a>
+      </li>
+      <li>
+        For live help with simple questions, check out
+        <a :href="discordURL" target="_blank">
+          the Discord chat
+        </a>
+      </li>
+      <li>
+        For more complex questions, post to
+        <a :href="forumURL" target="_blank">
+          the forum
+        </a>
+      </li>
+    </ul -->
+    <h2>
+      Let's count your stars!
+
+
+      <ul style="list-style-type:none">
+        <li>
+          <input type="checkbox" id="checkbox_teeth" v-model="checked_teeth">
+          <label for="checkbox"> Did you brush your teeth? </label>
+        </li>
+
+        <li>
+          <input type="checkbox" id="checkbox_five_minutes" v-model="checked_five_minutes">
+          <label for="checkbox"> Did you leave house in five minutes? </label>
+        </li>
+
+        <li>
+          <input type="checkbox" id="checkbox_eat_everything" v-model="checked_eat_everything">
+          <label for="checkbox"> Did you eat everything in your dish? </label>
+        </li>
+
+        <li>
+          <input type="checkbox" id="checkbox_eat_veg" v-model="checked_eat_veg">
+          <label for="checkbox"> Did you eat 3+ vegetables? </label>
+        </li>
+
+        <li>
+          <input type="checkbox" id="checkbox_eat_fruits" v-model="checked_eat_fruits">
+          <label for="checkbox"> Did you eat 2+ fruits? </label>
+        </li>
+
+        <li>
+          <input type="checkbox" id="checkbox_eat_diary" v-model="checked_eat_diary">
+          <label for="checkbox"> Did you have diary products (e.g. milk)? </label>
+        </li>
+
+        <li>
+          <input type="checkbox" id="checkbox_eat_nuts" v-model="checked_eat_nuts">
+          <label for="checkbox"> Did you eat nuts? </label>
+        </li>
+
+        <li>
+          <input type="checkbox" id="checkbox_cry" v-model="checked_cry">
+          <label for="checkbox"> Did you not cry today? </label>
+        </li>
+
+        <li>
+          <input type="checkbox" id="checkbox_fuzzy" v-model="checked_fuzzy">
+          <label for="checkbox"> Did you have a smooth day today? </label>
+        </li>
+
+        <li>
+          <input type="checkbox" id="checkbox_exercise" v-model="checked_exercise">
+          <label for="checkbox"> Did you exercise 2+ hours today? </label>
+        </li>
+
+      </ul>
+
+      <div id="calc">
+        <button class="button" v-on:click="count_star = countStar();">Let's see how much you had today-></button>
+        <p>You have {{ count_star }} stars.</p>
+      </div>
+
+    </h2>
+
+  </div>
+
+  <script>
+    var app = new Vue({
+      el: '#app',
+      data: {
+        greeting: 'Hello Dustin W. Jiao',
+        docsURL: 'http://vuejs.org/guide/',
+        discordURL: 'https://chat.vuejs.org',
+        forumURL: 'http://forum.vuejs.org/',
+        checked_teeth: true,
+        checked_five_minutes: true,
+        checked_eat_everything: true,
+        checked_eat_diary: true,
+        checked_eat_fruits: true,
+        checked_eat_nuts: true,
+        checked_eat_veg: true,
+        checked_cry: true,
+        checked_fuzzy: true,
+        checked_exercise: true,
+        count_star: 0
+      },
+      methods: {
+        humanizeURL: function (url) {
+          return url
+            .replace(/^https?:\/\//, '')
+            .replace(/\/$/, '')
+        },
+        countStar: function () {
+          var data = this.$data;
+          return (data.checked_teeth ? 2 : 0)
+            + (data.checked_five_minutes ? 2 : 0)
+            + (data.checked_eat_diary ? 2 : 0)
+            + (data.checked_eat_fruits ? 2 : 0)
+            + (data.checked_eat_everything ? 2 : 0)
+            + (data.checked_eat_nuts ? 2 : 0)
+            + (data.checked_eat_veg ? 2 : 0)
+            + (data.checked_cry ? 2 : 0)
+            + (data.checked_fuzzy ? 2 : 0)
+            + (data.checked_exercise ? 2 : 0);
+        }
+      }
+    })
+  </script>
+</body>
+
+</html>
