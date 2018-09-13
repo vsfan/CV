@@ -118,16 +118,16 @@
         docsURL: 'http://vuejs.org/guide/',
         discordURL: 'https://chat.vuejs.org',
         forumURL: 'http://forum.vuejs.org/',
-        checked_teeth: true,
-        checked_five_minutes: true,
-        checked_eat_everything: true,
-        checked_eat_diary: true,
-        checked_eat_fruits: true,
-        checked_eat_nuts: true,
-        checked_eat_veg: true,
-        checked_cry: true,
-        checked_fuzzy: true,
-        checked_exercise: true,
+        checked_teeth: false,
+        checked_five_minutes: false,
+        checked_eat_everything: false,
+        checked_eat_diary: false,
+        checked_eat_fruits: false,
+        checked_eat_nuts: false,
+        checked_eat_veg: false,
+        checked_cry: false,
+        checked_fuzzy: false,
+        checked_exercise: false,
         count_star: 0
       },
       methods: {
@@ -138,16 +138,16 @@
         },
         countStar: function () {
           var data = this.$data;
-          return (data.checked_teeth ? 2 : 0)
-            + (data.checked_five_minutes ? 2 : 0)
+          return (data.checked_teeth ? 1 : 0)
+            + (data.checked_five_minutes ? 1 : 0)
             + (data.checked_eat_diary ? 2 : 0)
-            + (data.checked_eat_fruits ? 2 : 0)
-            + (data.checked_eat_everything ? 2 : 0)
-            + (data.checked_eat_nuts ? 2 : 0)
-            + (data.checked_eat_veg ? 2 : 0)
-            + (data.checked_cry ? 2 : 0)
-            + (data.checked_fuzzy ? 2 : 0)
-            + (data.checked_exercise ? 2 : 0);
+            + (data.checked_eat_fruits ? 1 : 0)
+            + (data.checked_eat_everything ? 1 : 0)
+            + (data.checked_eat_nuts ? 1 : 0)
+            + (data.checked_eat_veg ? 1 : 0)
+            + (data.checked_cry ? 1 : 0)
+            + (data.checked_fuzzy ? 1 : 0)
+            + (data.checked_exercise ? 1 : 0);
         }
       }
     })
